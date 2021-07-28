@@ -16,6 +16,7 @@ function CarPage() {
         <ItemCart item={item} key={index} />
       ))}
       <p>Frete :{shipping !== 0 ? formatCurrency(shipping) : "Grátis"}</p>
+      <p>SubTotal: {totalPrice}</p>
       <p>Total: {formatCurrency(totalPrice + shipping)}</p>
     </div>
   );

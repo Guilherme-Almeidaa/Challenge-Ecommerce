@@ -5,16 +5,30 @@ import data from "../../data/products.js";
 import context from "../../provider/context";
 
 function ProductsPage() {
-  const { filterOrder, products, setProducts } = useContext(context);
+  const { products, setProducts } = useContext(context);
   const [filter, setFilter] = useState("");
   const [order, setOrder] = useState("growing");
   const [isLoading, setIsLoading] = useState(false);
+  const filterOrder = (products, filter, sort) => {
+    if (sort === "growing")
+      return products.sort((a, b) => {
+        if (a[filter] > b[filter]) return 1;
+        if (a[filter] < b[filter]) return -1;
+        return 0;
+      });
+    if (sort === "decreasing")
+      return products.sort((a, b) => {
+        if (a[filter] < b[filter]) return 1;
+        if (a[filter] > b[filter]) return -1;
+        return 0;
+      });
+  };
 
   useEffect(() => {
     setIsLoading(true);
-    setProducts(filterOrder(data, filter, order));
+    setProducts([...filterOrder(data, filter, order)]);
     setIsLoading(false);
-  }, [filter, order, filterOrder, setProducts]);
+  }, [filter, order, setProducts]);
 
   console.log(products);
 

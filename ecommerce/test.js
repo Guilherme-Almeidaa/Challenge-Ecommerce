@@ -80,4 +80,4 @@ const fitler2 = (a, b) => {
 
 }
 
-console.log(filterOrder(products, 'score', "decrescente"))
+console.log(filterOrder(products, 'name', "crescente"))
