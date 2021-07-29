@@ -1,0 +1,16 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    
+   
+    height: 60px;
+}
+.link-games {
+    text-decoration: none;
+    color: blanchedalmond;
+    margin-left: 10px;
+}
+
+.link-cart {
+    text-decoration: none;
+}

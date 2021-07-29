@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import ItemCart from "../../components/ItemCart";
 import context from "../../provider/context";
+import "./style.css";
 
 function CarPage() {
   const { cart, formatCurrency } = useContext(context);
@@ -12,12 +13,16 @@ function CarPage() {
   return (
     <div>
       <h1>Carrinho</h1>
-      {cart.map((item, index) => (
-        <ItemCart item={item} key={index} />
-      ))}
-      <p>Frete :{shipping !== 0 ? formatCurrency(shipping) : "Grátis"}</p>
-      <p>SubTotal: {totalPrice}</p>
-      <p>Total: {formatCurrency(totalPrice + shipping)}</p>
+      <div className="cont-price-info">
+        <p>Frete :{shipping !== 0 ? formatCurrency(shipping) : "Grátis"}</p>
+        <p>SubTotal: {formatCurrency(totalPrice)}</p>
+        <p>Total: {formatCurrency(totalPrice + shipping)}</p>
+      </div>
+      <div>
+        {cart.map((item, index) => (
+          <ItemCart item={item} key={index} />
+        ))}
+      </div>
     </div>
   );
 }

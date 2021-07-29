@@ -3,6 +3,7 @@ import HeaderFilters from "../../components/HeaderFilters";
 import Product from "../../components/Product";
 import data from "../../data/products.js";
 import context from "../../provider/context";
+import "./style.css";
 
 function ProductsPage() {
   const { products, setProducts } = useContext(context);
@@ -35,7 +36,7 @@ function ProductsPage() {
   return (
     <div>
       <HeaderFilters setOrder={setOrder} setFilter={setFilter} />
-      <div>
+      <div className="container-products">
         {isLoading
           ? "Loading..."
           : products.map((product, index) => (

@@ -75,9 +75,8 @@ const filterOrder = (products, filter, sort) => {
         return 0
     })
 }
+const se = products.find((item) => item.id === 312)
 
-const fitler2 = (a, b) => {
+const result = products.splice(se, 1)
 
-}
-
-console.log(filterOrder(products, 'name', "crescente"))
+console.log(result)

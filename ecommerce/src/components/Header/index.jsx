@@ -1,12 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ButtonCart from "../ButtonCart";
+import CartIcon from "../CartIcon";
+import "./style.css";
 
 function Header() {
   return (
-    <header>
-      <Link to="/">Voltar</Link>
-      <ButtonCart />
+    <header className="header">
+      <Link className="link-games" to="/">
+        <h1>Games.com</h1>
+      </Link>
+      <Link className="link-cart" to="/cart">
+        <CartIcon />
+      </Link>
     </header>
   );
 }

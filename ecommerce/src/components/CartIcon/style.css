@@ -1,0 +1,17 @@
+.number-items {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    position:absolute;
+    text-align: center;
+    font-weight: bolder;
+    margin-right: 2px;
+    color: black;
+}
+
+.container-car-icon {
+    display: flex;
+    justify-content: flex-end;
+    margin:10px ;
+}

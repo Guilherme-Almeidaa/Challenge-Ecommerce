@@ -1,0 +1,34 @@
+.item {
+    display: flex;
+    background-color: white;
+    margin: 10px;
+    border-radius: 10px;
+    justify-content: space-around;
+    box-shadow: 5px 5px 15px rgb(39, 38, 38);
+}
+
+.item-info {
+   font-family: 'poppins' ,sans-serif;
+}
+
+.cont-btn {
+    display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.btn-remove {
+  height: 50px;
+  width: 80px;
+  border:none;
+  background-color: rgb(218, 68, 68);
+  border-radius: 5px;
+  font-family: 'poppins',sans-serif;
+  font-weight: bolder;
+    
+}
+
+.btn-remove:hover {
+    cursor: pointer;
+    background-color: rgb(224, 115, 115);
+}

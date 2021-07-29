@@ -1,0 +1,97 @@
+.conteiner-header-filter {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.container-orders-filter {
+    display: flex;
+    justify-content: space-between;
+    width: 23%;
+}
+
+.input-radio-filter {
+    display: none;
+    
+}
+
+.label-filter {
+    position: relative;
+    color:rgb(199, 73, 15);
+    font-family: 'poppins',sans-serif;
+    font-size: 14px;
+    border:solid 2px rgb(199, 73, 15);
+    border-radius: 5px;
+    padding: 4px 4px;
+    display: flex;
+    background-color: white;
+    align-items: center;
+    transition: 0.5s;
+    box-shadow: 5px 5px 15px rgb(39, 38, 38);
+    
+}
+
+.label-filter:before {
+    content: "";
+    height: 15px;
+    width: 15px;
+    border:solid 3px rgb(199, 73, 15);
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: 0.5s;
+}
+
+.input-radio-filter:checked + .label-filter {
+  background-color: rgb(199, 73, 15);
+  color:white;
+  transition: 0.5s;
+}
+
+.cont-select {
+    margin-right: 5px;
+}
+
+.label-filter:hover{
+    background-color: rgb(199, 73, 15);
+    
+    color:white;
+  cursor: pointer;
+}
+
+.input-radio-filter:hover{
+    background-color: rgb(199, 73, 15);
+    height: 8px;
+    width: 8px;
+    border:solid white 4px;
+    color:white;
+    cursor: pointer;
+}
+
+.input-radio-filter:checked + .label-filter:before {
+  height: 8px;
+  width: 8px;
+  border:solid white 4px;
+  background-color: rgb(199, 73, 15);
+}
+
+.select {
+padding: 8px 12px;
+color:#333333;
+background-color: #eeeeee;
+border:1px solid #dddddd;
+cursor: pointer;
+border-radius: 5px;
+box-shadow: 5px 5px 15px rgb(39, 38, 38);
+}
+
+
+.select:focus,
+.select:hover {
+ outline: none;
+ border:solid 1px #494848;
+}
+
+.options {
+    background-color: #ffffff;
+}
